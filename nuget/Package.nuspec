@@ -10,8 +10,8 @@
     <description>Simit Mvc Web Extension Library</description>
     <tags>Simit,web,HtmlHelper,Extension,.Net,c#</tags>
 	<dependencies>      
-	  <package id="Microsoft.AspNet.Mvc" version="3.0.50813.1" targetFramework="net40" />
-	  <package id="Simit.Extensions" version="1.0.0.2" targetFramework="net40" />
+	  <dependency id="Microsoft.AspNet.Mvc" version="3.0.50813.1"  />
+	  <dependency id="Simit.Extensions" version="1.0.0.2"  />
     </dependencies>
   </metadata>
 </package>
