@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Simit.Web.Mvc.Extensions</id>
+    <version>1.0.0.0</version>
+    <authors>Umut Çatal</authors>
+    <owners>Minovex</owners>
+    <projectUrl>https://github.com/minovex/simit-web-mvc-extensions</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Simit Mvc Web Extension Library</description>
+    <tags>Simit,web,HtmlHelper,Extension,.Net,c#</tags>
+	<dependencies>      
+	  <package id="Microsoft.AspNet.Mvc" version="3.0.50813.1" targetFramework="net40" />
+	  <package id="Simit.Extensions" version="1.0.0.2" targetFramework="net40" />
+    </dependencies>
+  </metadata>
+</package>
