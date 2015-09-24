@@ -11,6 +11,21 @@ This library contains MVC html helpers methods.
 @Html.IMG(string path, string alt = null, object attiributes = null)
 
 
+## Configuring CDN
+
+To configure the Extension, an <appSettings> element should be included in the program's App.config or Web.config file.
+
+<pre>
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <add key="simit:cdn:url" value="http://domain..." />
+	
+</pre>
+
+
+
+
 ## Localization Extensions
 
 @Html.LocalResource(string key)
