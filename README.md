@@ -16,3 +16,9 @@ This library contains MVC html helpers methods.
 @Html.LocalResource(string key)
 
 @Html.LocalResource(string key, object replacements)
+
+
+## Nuget
+
+
+[Nuget Package on Nuget.org](https://www.nuget.org/packages/Simit.Web.Mvc.Extensions/)
