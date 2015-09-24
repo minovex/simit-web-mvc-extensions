@@ -1,5 +1,4 @@
-﻿
-//-----------------------------------------------------------------------
+﻿//-----------------------------------------------------------------------
 // <copyright file="LocalizationExtensions.cs" company="Minovex">
 //     Copyright 2013 Minovex. All rights reserved.
 // </copyright>
@@ -8,9 +7,12 @@
 namespace System.Web.Mvc.Html
 {
     #region Using Directives
+
     using System.Collections.Generic;
-    using Simit.Extensions;
-    #endregion
+    using System.ComponentModel;
+    using System.Linq;
+
+    #endregion Using Directives
 
     /// <summary>
     /// Extension Class
@@ -72,7 +74,12 @@ namespace System.Web.Mvc.Html
                 throw new ArgumentNullException(key + " resource not found");
             }
 
-            IDictionary<string, object> replacementList = replacements.AnonymousToDictionary();
+            IDictionary<string, object> replacementList = TypeDescriptor.GetProperties(replacements)
+                                                            .OfType<PropertyDescriptor>()
+                                                            .ToDictionary(
+                                                                prop => prop.Name,
+                                                                prop => prop.GetValue(replacements)
+                                                            );
 
             foreach (string replaceKey in replacementList.Keys)
             {
@@ -82,6 +89,6 @@ namespace System.Web.Mvc.Html
             return resource;
         }
 
-        #endregion
+        #endregion Public Static Methods
     }
 }
