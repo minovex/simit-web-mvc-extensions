@@ -11,7 +11,7 @@ This library contains MVC html helpers methods.
 @Html.IMG(string path, string alt = null, object attiributes = null)
 
 
-## Configuring CDN
+### Configuring CDN
 
 To configure the Extension, an <appSettings> element should be included in the program's Web.config file.
 
